@@ -10,3 +10,13 @@ CREATE TABLE IF NOT EXISTS city (
     city CHAR(32) NOT NULL,
     CONSTRAINT pk_City PRIMARY KEY (city)
 );
+
+
+CREATE TABLE IF NOT EXISTS shop (
+    item_id INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    item_name CHAR(32) NOT NULL,
+    price_tax_ex INTEGER NOT NULL,
+    price_tax_in INTEGER NOT NULL,
+    CONSTRAINT pk_itemId PRIMARY KEY (item_id, year)
+);
